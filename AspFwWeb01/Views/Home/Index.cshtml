@@ -1,0 +1,23 @@
+﻿@using AspFwWeb01.Models
+@using DataLayer.Models;
+@model HomeViewModel
+
+@{
+    ViewBag.Title = "Home Page";
+
+}
+
+<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">@Model.Message</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<ul>
+    
+    @foreach (Car car in Model.Cars)
+    {
+        <li><a href="~/Home/ItemDetails?id=@car.Id">@car.Model</a></li>
+    }
+
+</ul>

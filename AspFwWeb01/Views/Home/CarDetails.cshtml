@@ -1,0 +1,15 @@
+﻿
+@model AspFwWeb01.Models.CarDetailsViewModel
+
+@{
+    ViewBag.Title = "CarDetails";
+}
+
+<h2>Details of the Car @Model.Car.Brand</h2>
+
+<img src="@Model.Car.ImageUrl" />
+
+<p>
+    @Model.Car.Description
+</p>
+
