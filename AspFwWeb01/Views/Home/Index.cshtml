@@ -8,7 +8,7 @@
 }
 
 <div class="jumbotron">
-    <h1>ASP.NET</h1>
+    <h1>My wonderful cars</h1>
     <p class="lead">@Model.Message</p>
     <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
 </div>
@@ -17,7 +17,7 @@
     
     @foreach (Car car in Model.Cars)
     {
-        <li><a href="~/Home/ItemDetails?id=@car.Id">@car.Model</a></li>
+        <li><a href="~/Home/ItemDetails?rama=@car.Id">@car.Model</a></li>
     }
 
 </ul>
