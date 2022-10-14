@@ -2,27 +2,27 @@
 using DataLayerProject.Repository.Interfaces;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace DataLayerProject.Repository.Implementations
 {
-    public class GetCarByIdRepository : IGetCarByIdRepository
+    public class AddNewCarRepository : IAddNewCarRepository
     {
         private readonly CarsDBContext database;
 
-        public GetCarByIdRepository(CarsDBContext database)
+        public AddNewCarRepository(CarsDBContext database)
         {
             this.database = database;
         }
 
-        public Car GetCar(int carId)
+        public void Add(Car car)
         {
-            return database.Cars.Where(a=>a.Id == carId).FirstOrDefault();
+            //Add it the db
+            database.Cars.Add(car); 
+            database.SaveChanges();
         }
-
-       
     }
 }

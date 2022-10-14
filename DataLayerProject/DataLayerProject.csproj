@@ -49,10 +49,12 @@
     <Compile Include="CarsDBContext.cs" />
     <Compile Include="Models\Car.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\Implementations\AddNewCarRepository.cs" />
     <Compile Include="Repository\Implementations\GetCarByIdRepository.cs" />
     <Compile Include="Repository\Implementations\InMemoryCarsRepositoy.cs" />
     <Compile Include="Repository\Implementations\DummyGetCarByIdRepository.cs" />
     <Compile Include="Repository\Implementations\GetCarsRepository.cs" />
+    <Compile Include="Repository\Interfaces\IAddNewCarRepository.cs" />
     <Compile Include="Repository\Interfaces\IGetCarByIdRepository.cs" />
     <Compile Include="Repository\Interfaces\IGetCarsRepository.cs" />
   </ItemGroup>

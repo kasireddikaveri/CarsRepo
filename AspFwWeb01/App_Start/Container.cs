@@ -30,6 +30,8 @@ namespace AspFwWeb01.App_Start
             builder.RegisterType<GetCarByIdRepository>()
                 .As<IGetCarByIdRepository>();
 
+            builder.RegisterType<AddNewCarRepository>().As<IAddNewCarRepository>();
+
 
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));

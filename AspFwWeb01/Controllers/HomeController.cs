@@ -1,4 +1,5 @@
 ﻿using AspFwWeb01.Models;
+using DataLayer.Models;
 using DataLayer.Repository.Implementations;
 using DataLayer.Repository.Interfaces;
 using DataLayerProject.Repository.Interfaces;
@@ -14,11 +15,14 @@ namespace AspFwWeb01.Controllers
     {
         private readonly IGetCarsRepository getCarsRepository;
         private readonly IGetCarByIdRepository getCarByIdRepository;
+        private readonly IAddNewCarRepository addNewCarRepository;
 
-        public HomeController(IGetCarsRepository getCarsRepository, IGetCarByIdRepository getCarByIdRepository)
+        public HomeController(IGetCarsRepository getCarsRepository, 
+            IGetCarByIdRepository getCarByIdRepository, IAddNewCarRepository addNewCarRepository)
         {
             this.getCarsRepository = getCarsRepository;
             this.getCarByIdRepository = getCarByIdRepository;
+            this.addNewCarRepository = addNewCarRepository;
         }
 
         public ActionResult Index()
@@ -51,5 +55,26 @@ namespace AspFwWeb01.Controllers
 
             return View();
         }
+
+        [HttpPost]
+        public ActionResult AddNewCarPost(Car car) 
+        {
+            addNewCarRepository.Add(car);
+            return View();
+        }
+
+       
+        public ActionResult AddNewCar(Car car) 
+        {
+            return View("AddNewCarV2");
+        }
+
+        [HttpPost]
+        public JsonResult AddNewCarJson(Car car) 
+        {
+            addNewCarRepository.Add(car);
+            return Json("success", JsonRequestBehavior.AllowGet);
+        }
+
     }
 }
