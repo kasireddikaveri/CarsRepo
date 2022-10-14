@@ -9,6 +9,7 @@ using DataLayer.Repository.Implementations;
 using DataLayer.Repository.Interfaces;
 using DataLayerProject.Repository.Implementations;
 using DataLayerProject.Repository.Interfaces;
+using DataLayerProject;
 
 namespace AspFwWeb01.App_Start
 {
@@ -19,12 +20,14 @@ namespace AspFwWeb01.App_Start
             var builder = new ContainerBuilder();
             builder.RegisterControllers(typeof(MvcApplication).Assembly);
 
+            builder.RegisterType<CarsDBContext>();
+
             //CONFIG SETTING
-            builder.RegisterType<DummyCarsRepository>()
+            builder.RegisterType<GetCarsRepository>()
                 .As<IGetCarsRepository>();
 
 
-            builder.RegisterType<DummyGetCarByIdRepository>()
+            builder.RegisterType<GetCarByIdRepository>()
                 .As<IGetCarByIdRepository>();
 
 

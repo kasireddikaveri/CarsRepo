@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataLayer.Repository.Implementations
 {
-    public class DummyCarsRepository : IGetCarsRepository
+    public class InMemoryCarsRepositoy : IGetCarsRepository
     {
         public List<Car> GetCars()
         {
