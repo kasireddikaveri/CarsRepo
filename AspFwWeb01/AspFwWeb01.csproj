@@ -158,6 +158,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\CarDetailsViewModel.cs" />
+    <Compile Include="Models\EditCarViewModel.cs" />
     <Compile Include="Models\HomeViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -204,6 +205,8 @@
     <Content Include="Views\Home\AddNewCar.cshtml" />
     <Content Include="Views\Home\AddNewCarPost.cshtml" />
     <Content Include="Views\Home\AddNewCarV2.cshtml" />
+    <Content Include="Views\Home\EditCar.cshtml" />
+    <Content Include="Views\Home\NoCarFound.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

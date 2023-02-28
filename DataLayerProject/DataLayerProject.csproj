@@ -54,9 +54,11 @@
     <Compile Include="Repository\Implementations\InMemoryCarsRepositoy.cs" />
     <Compile Include="Repository\Implementations\DummyGetCarByIdRepository.cs" />
     <Compile Include="Repository\Implementations\GetCarsRepository.cs" />
+    <Compile Include="Repository\Implementations\UpdateCar.cs" />
     <Compile Include="Repository\Interfaces\IAddNewCarRepository.cs" />
     <Compile Include="Repository\Interfaces\IGetCarByIdRepository.cs" />
     <Compile Include="Repository\Interfaces\IGetCarsRepository.cs" />
+    <Compile Include="Repository\Interfaces\IUpdateCar.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

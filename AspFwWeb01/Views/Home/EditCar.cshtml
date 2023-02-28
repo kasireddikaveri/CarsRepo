@@ -1,0 +1,45 @@
+﻿@model AspFwWeb01.Models.EditCarViewModel
+@using AspFwWeb01.Models
+<h1>Editing a Car</h1>
+<input id="hdnCarId" type="hidden" value="@Model.Car.Id" />
+<div class="form-group">
+    <label for="brandrk">Brand</label>
+    <input type="text" name="Brand" class="form-control" id="brandrk"
+           aria-describedby="emailHelp" placeholder="Enter brand" value="@Model.Car.Brand">
+
+</div>
+<div class="form-group">
+    <label for="model">Model</label>
+    <input type="text" name="Model" class="form-control" id="model"
+           placeholder="Enter the car model" value="@Model.Car.Model">
+</div>
+
+<div class="form-group">
+    <label for="cost">Cost</label>
+    <input type="text" name="Cost" class="form-control" id="cost"
+           placeholder="Enter the cost model" value="@Model.Car.Cost">
+</div>
+
+<button id="btnUpdateCar" class="btn btn-primary">Update</button>
+
+
+
+<div id="successModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" id="btnModalClose" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Update Car</h4>
+            </div>
+            <div class="modal-body">
+                <p>Car Updated Successfully</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button"  id="btnCloseModal" class="btn btn-default" data-dismiss="modal">Close</button>
+                
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+@Scripts.Render("~/bundle/HomePage")

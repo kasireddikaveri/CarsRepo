@@ -11,15 +11,24 @@
     <h1 class="page-heading">My wonderful cars</h1>
     <p class="lead">@Model.Message</p>
     <p>
-    
-    <a class="btn-learn-more" href="#" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+
+        <a class="btn-learn-more" href="#" class="btn btn-primary btn-lg">Learn more &raquo;</a>
+    </p>
 </div>
 
 <ul>
-    
+
     @foreach (Car car in Model.Cars)
     {
-        <li><a href="~/Home/ItemDetails?id=@car.Id">@car.Model</a></li>
+        <div class="row">
+            <div class="col-md-6">
+                <a href="~/Home/ItemDetails?id=@car.Id">@car.Model</a>
+            </div>
+            <div class="col-md-6">
+                <a href="~/Home/EditCar?id=@car.Id">EDIT</a>
+            </div>
+        </div>
+
     }
 
 </ul>
